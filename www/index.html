@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-type" content="text/x-component">
+    <title>Display Sekali saja ya.....</title>
+
+    <!-- General meta details -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="<!-- replace here with Google author profile -->" />
+    <meta name="robot" content="index,follow" />
+
+
+
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+
+
+
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+<script type="text/javascript" charset="utf-8" src="tts.js"></script>
+
+
+
+<script>
+$(document).ready(function(){
+
+
+$(document).ajaxStart(function() 
+	{
+	$('#loading').show();
+	}).ajaxStop(function() 
+	{
+	$('#loading').hide();
+	});
+
+
+
+
+
+
+setInterval(loadLog, 5000);
+
+function loadLog(){
+console.log("interval...");
+$("#loading").hide();
+$("#idisplayku").load("http://omahbiasawae.net/duana_antrian/i_display.php?aksi=baca");
+$("#loading").show();
+
+
+}
+
+
+
+
+
+
+
+
+
+setInterval(loadLog2, 5000);
+
+function loadLog2(){
+console.log("interval2...");
+$("#idisplayku2").load("http://omahbiasawae.net/duana_antrian/i_display.php?aksi=baca2");
+
+
+}
+
+
+
+
+
+
+
+
+setInterval(loadLog3, 15000);
+
+function loadLog3(){
+console.log("interval3...");
+$("#idisplayku3").load("http://omahbiasawae.net/duana_antrian/i_display3.php?aksi=stop");
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+})
+</script>
+
+
+
+
+
+
+
+
+
+
+<style>
+  
+  #foo_footer {
+    position: fixed;
+    bottom: 0;
+  }
+
+	
+.panel > .panel-heading-custom {
+    background: #eaff06; color: black;
+}
+
+.panel > .panel-body-custom {
+    background: #e3e8e2; color: black;
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+
+<table width="100% border="0">
+<tr bgcolor="grey">
+<td height="100" align="center">
+
+<img src="img/logo.png" height="100">
+<h1 align="center">DISPLAY QUEUE</h1>
+</td>
+</tr>
+</table>
+
+
+
+
+<table width="100% border="0">
+<tr bgcolor="orange">
+<td height="500">
+
+<div id="idisplayku" align="center"></div>
+<div id="idisplayku2"></div>
+
+<div id="idisplayku3"></div>
+
+
+<div id="loading" style="display:none" align="center">
+<img src="img/progress-bar.gif" width="100" height="16">
+</div>
+
+
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+<p align="center">
+2018. Your Queue System
+</p>
+<hr>
+
+
+
+
+
+
+
+</body>
+</html>

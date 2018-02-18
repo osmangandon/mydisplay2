@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "mydisplay",
+  "short_name": "mydisplay",
+  "version": "com.mydisplay.mydisplay",
+  "description": "mydisplay",
+  "author": "mydisplay",
+  "icons": [],
+  "start_url": "index.html"
+}
